@@ -3,6 +3,7 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Header from "../components/header/header";
+import 'tailwindcss/tailwind.css';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -16,10 +17,6 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Head>
-        <Header>
-        </Header>
-      </Head>
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
