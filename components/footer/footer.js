@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Footer(props) {
     return(
         <footer class="text-gray-600 body-font">
