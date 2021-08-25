@@ -6,8 +6,8 @@ import Header from "../components/header/header";
 import 'tailwindcss/tailwind.css';
 /* import useSWR from 'swr'; */
 import Link from 'next/link';
-import Body from "../components/homebody/body";
 /* import cookie from 'js-cookie'; */
+import LightFeatureA from "../components/homebody/body";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -19,14 +19,16 @@ export async function getStaticProps() {
 }
 
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Body/>
+      <LightFeatureA/>
     </Layout>
   );
 }
 
+
+//another home screen for logins
 /*function Home() {
   const {data, revalidate} = useSWR('/api/me', async function(args) {
     const res = await fetch(args);
