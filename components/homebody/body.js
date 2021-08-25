@@ -3,11 +3,11 @@ import React from "react";
 import PropTypes from  "prop-types";
 import EmblaCarousel from "/components/homebody/carousel/imageCarousel";
 
-function carousel(){
-  return(
-    <EmblaCarousel/>
-  )
-}
+//function carousel(){
+//  return(
+//   <EmblaCarousel/>
+//  )
+//}
 
 function LightFeatureA(props) {
   return (

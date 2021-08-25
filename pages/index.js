@@ -8,7 +8,8 @@ import 'tailwindcss/tailwind.css';
 import Link from 'next/link';
 /* import cookie from 'js-cookie'; */
 import LightFeatureA from "../components/homebody/body";
-import EmblaCarousel from "../components/homebody/carousel/imageCarousel";
+//import EmblaCarousel from "../components/homebody/carousel/imageCarousel";
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -23,7 +24,7 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <EmblaCarousel/>
+      
       <LightFeatureA/>
     </Layout>
   );
