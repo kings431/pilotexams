@@ -1,6 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import PropTypes from  "prop-types";
+import EmblaCarousel from "/components/homebody/carousel/imageCarousel";
+
+function carousel(){
+  return(
+    <EmblaCarousel/>
+  )
+}
 
 function LightFeatureA(props) {
   return (
@@ -27,14 +34,13 @@ function LightFeatureA(props) {
             </div>
             <div className="flex-grow pl-6">
               <h2 className="text-gray-900 text-lg title-font font-medium mb-2">
-                Shooting Stars
+                Pricing
               </h2>
               <p className="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. 
+              nizus provides the most complete, efficient, and affordable system of aeronautical theory exam training on the market.
               </p>
               <a href className={`mt-3 text-${props.theme}-500 inline-flex items-center`}>
-                Learn More
+                Check Prices
                 <svg
                   fill="none"
                   stroke="currentColor"

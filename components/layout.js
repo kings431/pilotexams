@@ -7,8 +7,8 @@ import Link from "next/link";
 import "tailwindcss/tailwind.css";
 import Footer from "./footer/footer";
 
-const name = "Marcus";
-export const siteTitle = "Next.js Sample Website";
+const name = "Pilot Exams";
+export const siteTitle = "Pilot Exams";
 
 export default function Layout({ children, home }) {
   return (
@@ -33,7 +33,7 @@ export default function Layout({ children, home }) {
         <header className={styles.header}>
           {home ? (
             <>
-              <Image
+              <Image //this removes profile icon on home screen
                 priority
                 src="/images/profile.jpg"
                 className={utilStyles.borderCircle}
