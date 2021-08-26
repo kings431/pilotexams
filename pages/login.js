@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-
 import { auth } from "/utils/nhost";
-
 import {
   Text,
   Stack,
@@ -22,7 +20,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const router = useRouter();
-  const GITHUB_LOGIN = `${process.env.NEXT_PUBLIC_NHOST_BACKEND}/auth/providers/github`;
+  //const GITHUB_LOGIN = `${process.env.NEXT_PUBLIC_NHOST_BACKEND}/auth/providers/github`;
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -80,24 +78,6 @@ export default function Login() {
             </Button>
           </Box>
         </form>
-      </Center>
-      <Center>
-        <Stack isInline ml={4} mt={6} spacing={8} alignContent="center">
-          <Button aria-label="Google Login" leftIcon={<FaGoogle />}>
-            Google
-          </Button>
-          <Button
-            as="a"
-            href={GITHUB_LOGIN}
-            aria-label="Github Login"
-            leftIcon={<FaGithub />}
-          >
-            Github
-          </Button>
-          <Button aria-label="Facebook Login" leftIcon={<FaFacebook />}>
-            Facebook
-          </Button>
-        </Stack>
       </Center>
       <Text mt={4} textAlign="center">
         Don't have an account? <a href="/signup">Click here to Sign Up</a>

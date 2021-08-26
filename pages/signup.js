@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-import { auth } from "@/utils/nhost";
-
+import { auth } from "/utils/nhost";
 import {
   Text,
   Stack,
@@ -12,9 +11,9 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
+//import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
 
-import Container from "@/components/ContainerComponent";
+import Container from "/components/ContainerComponent";
 
 export default function Signup() {
   const [displayName, setDisplayName] = useState("");
@@ -90,24 +89,6 @@ export default function Signup() {
             </Button>
           </Box>
         </form>
-      </Center>
-      <Center>
-        <Stack isInline ml={4} mt={6} spacing={8} alignContent="center">
-          <Button aria-label="Google Login" leftIcon={<FaGoogle />}>
-            Google
-          </Button>
-          <Button
-            as="a"
-            href={GITHUB_LOGIN}
-            aria-label="Github Login"
-            leftIcon={<FaGithub />}
-          >
-            Github
-          </Button>
-          <Button aria-label="Facebook Login" leftIcon={<FaFacebook />}>
-            Facebook
-          </Button>
-        </Stack>
       </Center>
       <Text mt={4} textAlign="center">
         Already have an account? <a href="/login">Click here to Sign Up</a>

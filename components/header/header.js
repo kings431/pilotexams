@@ -21,15 +21,16 @@ function Header(props) {
           <span class="ml-3 text-xl">Pilot Exams</span>
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link href="/login"><a class="mr-5 hover:text-gray-900">Stages</a></Link>
+          <Link href="/stages"><a class="mr-5 hover:text-gray-900">Stages</a></Link>
           <Link href="/faq"><a class="mr-5 hover:text-gray-900">FAQ</a></Link>
           <Link href="/contact"><a class="mr-5 hover:text-gray-900">Contact</a></Link>
           <Link href="/partner"><a class="mr-5 hover:text-gray-900">Partner</a></Link>
         </nav>
-        <NextLink href="/login">
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
             {" "}
+            <NextLink href="/login">
             Get Started!
+            </NextLink>
             <svg
               fill="none"
               stroke="currentColor"
@@ -42,7 +43,6 @@ function Header(props) {
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
-        </NextLink>
       </div>
     </header>
   );
