@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
-import { auth } from "@/utils/nhost";
+import { auth } from "/utils/nhost";
 
 import {
   Text,
@@ -13,9 +13,9 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
+//import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
 
-import Container from "@/components/ContainerComponent";
+import Container from "/components/ContainerComponent";
 
 export default function Login() {
   const [email, setEmail] = useState("");

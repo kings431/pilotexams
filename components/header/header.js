@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NextLink from "next/link"
 
 function Header(props) {
   return (
@@ -20,13 +21,13 @@ function Header(props) {
           <span class="ml-3 text-xl">Pilot Exams</span>
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link href="/stages"><a class="mr-5 hover:text-gray-900">Stages</a></Link>
+          <Link href="/login"><a class="mr-5 hover:text-gray-900">Stages</a></Link>
           <Link href="/faq"><a class="mr-5 hover:text-gray-900">FAQ</a></Link>
           <Link href="/contact"><a class="mr-5 hover:text-gray-900">Contact</a></Link>
           <Link href="/partner"><a class="mr-5 hover:text-gray-900">Partner</a></Link>
         </nav>
-        <Link href="www.google.com" passHref>
-          <button onclick="www.google.com" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" href="/first-post">
+        <NextLink href="/login">
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
             {" "}
             Get Started!
             <svg
@@ -41,7 +42,7 @@ function Header(props) {
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
-        </Link>
+        </NextLink>
       </div>
     </header>
   );

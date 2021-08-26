@@ -14,14 +14,6 @@ import ReactDOM from "react-dom";
 import App from "./_app";
 import { NhostApolloProvider } from "@nhost/react-apollo";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <NhostApolloProvider gqlEndpoint="https://hasura-be556805.nhost.app/v1/graphql">
-      <App />
-    </NhostApolloProvider>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
 export default function Home({ allPostsData }) {
   return (
     <Layout home>

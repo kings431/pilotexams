@@ -3,7 +3,7 @@ import NextLink from "next/link";
 import { Button, Flex, Box } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import { useAuth } from "@nhost/react-auth";
-import { auth } from "@/utils/nhost";
+import { auth } from "/utils/nhost";
 
 const StickyNav = styled(Flex)`
   position: sticky;
