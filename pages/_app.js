@@ -2,8 +2,8 @@ import "../styles/global.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { NhostAuthProvider } from "@nhost/react-auth";
 import { NhostApolloProvider } from "@nhost/react-apollo";
+import { auth } from "/utils/nhost";
 
-import { auth } from "@/utils/nhost";
 
 function App({ Component, pageProps }) {
   return (
