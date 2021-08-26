@@ -11,29 +11,33 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-//import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
-
+//import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa"; //different signin options
 import Container from "/components/ContainerComponent";
+import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
+import Layout from "../components/layout";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const router = useRouter();
-  //const GITHUB_LOGIN = `${process.env.NEXT_PUBLIC_NHOST_BACKEND}/auth/providers/github`;
+  //const GITHUB_LOGIN = `${process.env.NEXT_PUBLIC_NHOST_BACKEND}/auth/providers/github`; //github login
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
       await auth.login(email, password);
     } catch (error) {
-      return alert("Login Failed");
+      return alert("Login Failed! Please Try again.");
     }
 
     router.push("/");
   }
 
   return (
+    <div>
+      <Header/>
     <Container>
       <Heading as="h1" textAlign="center">
         Login
@@ -64,7 +68,7 @@ export default function Login() {
               ml={4}
               type="submit"
             >
-              Sign Up
+              Log In
             </Button>
             <Button
               colorScheme="red"
@@ -83,5 +87,7 @@ export default function Login() {
         Don't have an account? <a href="/signup">Click here to Sign Up</a>
       </Text>
     </Container>
+    <Footer/>
+    </div>
   );
 }

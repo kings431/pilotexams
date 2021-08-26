@@ -13,11 +13,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./_app";
 import { NhostApolloProvider } from "@nhost/react-apollo";
+import Container from "../components/ContainerComponent";
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
+    <div>
+      <Header/>
     <Layout home>
       <LightFeatureA />
     </Layout>
+    </div>
   );
 }

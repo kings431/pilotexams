@@ -14,6 +14,9 @@ import {
 //import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
 
 import Container from "/components/ContainerComponent";
+import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
+import Layout  from "../components/layout";
 
 export default function Signup() {
   const [displayName, setDisplayName] = useState("");
@@ -37,6 +40,8 @@ export default function Signup() {
   }
 
   return (
+    <div>
+      <Header/>
     <Container>
       <Heading as="h1" textAlign="center">
         Register
@@ -94,5 +99,7 @@ export default function Signup() {
         Already have an account? <a href="/login">Click here to Sign Up</a>
       </Text>
     </Container>
+    <Footer/>
+    </div>
   );
 }

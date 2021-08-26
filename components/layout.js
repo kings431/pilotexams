@@ -15,7 +15,6 @@ export default function Layout({ children, home }) {
     <div>
       <div className={styles.container}>
         <Head>
-          <Header/>
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
