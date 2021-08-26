@@ -3,33 +3,20 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Header from "../components/header/header";
-import 'tailwindcss/tailwind.css';
+import "tailwindcss/tailwind.css";
 /* import useSWR from 'swr'; */
-import Link from 'next/link';
+import Link from "next/link";
 /* import cookie from 'js-cookie'; */
 import LightFeatureA from "../components/homebody/body";
 //import EmblaCarousel from "../components/homebody/carousel/imageCarousel";
 
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
-
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      
-      <LightFeatureA/>
+      <LightFeatureA />
     </Layout>
   );
 }
-
 
 //another home screen for logins
 /*function Home() {
@@ -49,7 +36,6 @@ export default function Home({ allPostsData }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <h1>Simplest login</h1>
-
       <h2>Proudly using Next.js, Mongodb and deployed with Now</h2>
       {loggedIn && (
         <>
@@ -73,5 +59,4 @@ export default function Home({ allPostsData }) {
     </div>
   );
 }
-
 export default Home;*/
