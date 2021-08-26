@@ -11,7 +11,7 @@ import LightFeatureA from "../components/homebody/body";
 //import EmblaCarousel from "../components/homebody/carousel/imageCarousel";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./_App";
 import { NhostApolloProvider } from "@nhost/react-apollo";
 
 ReactDOM.render(
